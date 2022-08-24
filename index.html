@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body >
+    <div class="header">
+        <div class="logo">Hotel <span>Finder</span></div>
+        <div class="user">
+            <button>Sign Up</button>
+            <button>Sign In</button>
+            <input list="currency" class="currency">
+            <dataList id="currency">
+                <option value="USD" selected>USD</option>
+                <option value="EGP">EGP</option>
+            </dataList>
+            <input list="language" class="language">
+            <datalist id="language">
+                <option value="EN" selected>EN</option>
+                <option value="AR">AR</option>
+            </datalist>
+            <button id="convert" onclick="changeLanguage()"> Arabic</button>
+        </div>
+    </div>
+    <div class="navbar">
+        <ol>
+            <li ><a class="active" href="#">Home</a></li>
+            <li><a href="#">Elements</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">User Profile</a></li>
+            <li><a href="#">Pages</a></li>
+        </ol>
+    </div>
+    <div class="main">
+        <h2 class="stars"><span>&#9734;
+            &#9734;
+            &#9734;
+            &#9734;
+        </span>&#9734;
+    </h2>
+        <h1>Find Your Perfect Hotel</h1>
+        <div class="border"></div>
+    </div>
+    <div class="search">
+        <p>Where are you going?</p>
+        <input type="text" placeholder="Enter city, region or district">
+        <input type="date" placeholder="start date">
+        <input type="date" placeholder="end date">
+        <input list="travelers">
+        <datalist id="travelers">
+            <option value="1 adult">1 adult</option>
+            <option value="2 adult">2 adult</option>
+            <option value="3 adult">3 adult</option>
+        </datalist>
+        <input type="button" value="SEARCH">
+        <br><input type="checkbox" name="no dates" id="noDates"> I don't have specefic dates yet.
+    </div>
+</body>
+    <script>
+        function changeLanguage(){
+            let body = document.getElementsByTagName("body");
+            body[0].setAttribute("dir", "rtl");
+        }
+    </script>
+</html>
